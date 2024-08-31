@@ -1,4 +1,4 @@
-#SheWiseAI
+# SheWiseAI - Express Interest!
 
 A simple landing page, to register interest for SheWiseAI.
 
@@ -41,7 +41,7 @@ SOFTWARE.-->
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Vindhyaa-Saravanan/SheWiseAI">
+  <a href="https://github.com/Vindhyaa-Saravanan/shewiseai-landing-page">
     <img src="images\logo.png" alt="Logo" width="200" height="200">
   </a>
 
@@ -53,9 +53,9 @@ SOFTWARE.-->
     <a href="https://whats-in-my-pantry.vercel.app/"><strong>Take me to the app »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Vindhyaa-Saravanan/SheWiseAI">Sign Up for Updates</a>
+    <a href="https://github.com/Vindhyaa-Saravanan/shewiseai-landing-page">Sign Up for Updates</a>
     ·
-    <a href="https://github.com/Vindhyaa-Saravanan/SheWiseAI/issues">Request Feature</a>
+    <a href="https://github.com/Vindhyaa-Saravanan/shewiseai-landing-page/issues">Request Feature</a>
   </p>
 </div>
 
