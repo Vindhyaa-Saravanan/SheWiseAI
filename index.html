@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <title>SheWiseAI</title>
+    <meta
+      name="description"
+      content="An app that provides real-time, AI-driven women's health information, combining live web scraping with RAG technology for precise, data-backed responses."
+    />
+  </head>
+    <body class="is-preload">
+
+      <!-- Header -->
+        <header id="header">
+          <img src="images/logo.png" alt="Logo" height="100" width="100"/>
+          <h1>SheWiseAI</h1>
+          <p>Stay informed and empowered with SheWiseAI, your personalized, 
+            privacy-first health companion for women.</p>
+    
+        </header>
+  
+      <!-- Signup Form -->
+        <form id="signup-form" method="post">
+          <input type="email" name="email" id="email" placeholder="Enter your email address" />
+          <input type="submit" value="Sign Up" />
+        </form>
+
+      <!-- Hidden iframe to submit to Google Form -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+  
+      <!-- Footer -->
+        <footer id="footer">
+          <ul class="icons">
+            <li><a href="https://github.com/Vindhyaa-Saravanan/SheWiseAI" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Vindhyaa-Saravanan.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+        <script>
+          document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('email').value;
+            var googleFormActionUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScuAn4sMy4BlzOUYE-NMJMw41Y17TgIl_a4yKED4OUB29S_uA/formResponse'; // Form action URL
+            var formData = new FormData();
+            formData.append('entry.1045781291', email); // Replace 'entry.1045781291' with the correct field ID for your form
+    
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', googleFormActionUrl, true);
+            xhr.setRequestHeader('Accept', 'application/xml, text/xml, */*; q=0.01');
+            xhr.send(formData);
+    
+            xhr.onload = function() {
+              if (xhr.status === 200 || xhr.status === 0) {
+                alert('Email saved successfully!');
+              } else {
+                alert('There was a problem with the request.');
+              }
+            };
+          });
+        </script>
+  </body>
+</html>
